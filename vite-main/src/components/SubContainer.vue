@@ -5,10 +5,10 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
 import microAppRoutesConfig from '@/config/config'
-import { registerMicroApps, start, loadMicroApp } from "qiankun"
+import { registerMicroApps, start } from "qiankun"
 
 onMounted(() => {
-    registerMicroApps(microAppRoutesConfig)
+     registerMicroApps(microAppRoutesConfig)
     start({
         sandbox: {
             experimentalStyleIsolation: true // 样式隔离

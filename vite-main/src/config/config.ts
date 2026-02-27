@@ -1,11 +1,15 @@
 console.log(import.meta.env.MODE)
 
+// const isPro = import.meta.env.MODE === 'production'
+
+
 const microAppRoutesConfig = [
     {
         name: "vite-sub-one",
-        entry:"//localhost:5174",
+        // entry: isPro ? "http://localhost/qiankun/sub-one/sub-child1" : "//localhost:5174",
+        entry: "//localhost:5174",
         container: "#sub-container",
-        activeRule: "/sub1",
+        activeRule: '/sub1',
     },
     {
         name: "vite-sub-two",

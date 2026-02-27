@@ -4,10 +4,10 @@ import type { RouteRecordRaw } from "vue-router"
 
 const routes: Array<RouteRecordRaw> = [{
     path: "/",
-    // redirect: "/sub1",
+    redirect: "/sub1",
     children:[
         {
-            path: "/sub1",
+            path: "/sub1/:pathMatch(.*)*",
             component: () => import("@/components/SubContainer.vue")
         },
         {
@@ -17,8 +17,10 @@ const routes: Array<RouteRecordRaw> = [{
     ]
 }]
 
+const baseUrl = import.meta.env.MODE === 'development' ? './' : '/qiankun'
+
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory(baseUrl),
     routes
 })
 

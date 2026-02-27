@@ -2,6 +2,8 @@ import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
 
+import router from "@/router/route"
+
 import {
     renderWithQiankun,
     qiankunWindow
@@ -13,7 +15,7 @@ let app: any
 
 const render = (container: any) => {
     app = createApp(App)
-    app.mount(container ? container.querySelector("#app") : '#app')
+    app.use(router).mount(container ? container.querySelector("#app") : '#app')
 }
 
 const initQianKun = () => {

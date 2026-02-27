@@ -1,6 +1,14 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
 import { RouterView, RouterLink } from "vue-router"
+
+// const router = useRouter()
+
+// const toSub = () => {
+//   // console.log
+//   router.push('/sub1')
+// }
+
 </script>
 
 <template>
@@ -14,7 +22,7 @@ import { RouterView, RouterLink } from "vue-router"
     <!-- <div class=""></div> -->
     <div class="nav-bar">
       <router-link to="/sub1">子应用1</router-link> | 
-      <router-link to="/sub2">子应用2</router-link>
+      <router-link to="/sub2">子应用2</router-link> 
     </div>
     <RouterView></RouterView>
   </div>
