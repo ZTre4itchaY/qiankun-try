@@ -24,9 +24,13 @@ const routes: Array<RouteRecordRaw> = [
 
 const baseUrl = import.meta.env.MODE === 'development' ? '/' : "/qiankun/sub-one"
 
+const qiankunBase = import.meta.env.MODE === 'development' ? "/sub1" : "/qiankun/sub1"
+
+console.log(qiankunBase)
+
 const router = createRouter({
     history: createWebHistory(qiankunWindow.__POWERED_BY_QIANKUN__
-        ? '/sub1'
+        ? qiankunBase
         : baseUrl),
     routes
 })
