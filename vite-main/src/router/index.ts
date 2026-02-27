@@ -17,7 +17,7 @@ const routes: Array<RouteRecordRaw> = [{
     ]
 }]
 
-const baseUrl = import.meta.env.MODE === 'development' ? './' : '/qiankun'
+const baseUrl = import.meta.env.MODE === 'development' ? '/' : '/qiankun'
 
 const router = createRouter({
     history: createWebHistory(baseUrl),

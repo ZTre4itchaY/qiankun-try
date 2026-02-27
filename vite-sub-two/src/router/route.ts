@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from "vue-router"
 
-import { qiankunWindow } from 'vite-plugin-qiankun/dist/helper'
+// import { qiankunWindow } from 'vite-plugin-qiankun/dist/helper'
 
 import type { RouteRecordRaw } from "vue-router"
 
@@ -22,7 +22,7 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router = createRouter({
-    history: createWebHashHistory(qiankunWindow.__POWERED_BY_QIANKUN__ ? "/sub2" : './'),
+    history: createWebHashHistory(),
     routes
 })
 

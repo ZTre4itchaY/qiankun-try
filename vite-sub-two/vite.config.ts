@@ -5,7 +5,7 @@ import qiankun from "vite-plugin-qiankun"
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "./",
+  base: process.env.NODE_ENV === 'development' ? "./" : "/qiankun/sub-two/",
   plugins: [
     vue(),
     qiankun("vite-sub-two", {
